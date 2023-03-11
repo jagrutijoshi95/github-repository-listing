@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "github-repository-listing"
+  "defaultProject": "github-repository-listing",
+  "cli": {
+    "analytics": false
+  }
 }
