@@ -1,0 +1,38 @@
+<div class="grid repo-grid w-full">
+    <div class="grid w-full" *ngIf="($repositoryList|async) as repositoryList; else loading">
+        <p-table #dt1 [value]="repositoryList" dataKey="id" [showCurrentPageReport]="true"
+            [globalFilterFields]="['name']" class="w-full">
+
+            <!-- search repository-->
+
+            <ng-template pTemplate="caption">
+                <div class="p-d-flex">
+                    <span class="p-input-icon-left p-ml-auto">
+                        <i class="pi pi-search"></i>
+                        <input pInputText type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')"
+                            placeholder="Search repository" />
+                    </span>
+                </div>
+            </ng-template>
+
+
+            <ng-template pTemplate="body" let-repo>
+                <p-card [header]="repo.name!" class="col-12 repo-card" styleClass="repo-card">
+
+                    <div class="description mb-2">
+                        {{repo.description}}
+                    </div>
+                    <p-chip [label]="topic" styleClass="mx-1 my-1 custom-chip"
+                        *ngFor="let topic of repo.topics"></p-chip>
+                </p-card>
+            </ng-template>
+
+        </p-table>
+    </div>
+    <ng-template #loading>
+        <app-loader></app-loader>
+    </ng-template>
+</div>
+
+<p-paginator (onPageChange)="getRepositoryList($event.rows,$event.page+1)" [rows]="rowsPerPage"
+    [totalRecords]="totalRepositories" [rowsPerPageOptions]="[10,20,50,100]"></p-paginator>

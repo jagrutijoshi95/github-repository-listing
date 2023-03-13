@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+body,
+html {
+    font-family: 'Roboto', sans-serif !important;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.data-card {
+    &.p-card {
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .p-card-title {
+        text-align: center;
+        font-size: large !important;
+    }
+}

@@ -1,0 +1,32 @@
+<div class="grid ml-0 mr-0 justify-content-center">
+    <div class="col-12 md:col-10">
+        <div class="grid">
+
+            <div class="col-12 md:col-3">
+                <div class="user-profile">
+                    <a href="#">
+                        <img [src]="userDetails.avatar_url" alt="Image" />
+                    </a>
+                </div>
+            <!-- </div>
+            <div class="col-12 md:col-9"> -->
+                <h2 class="mb-0">
+                    {{userDetails.name}}
+                </h2>
+                <p class="user-login mt-0">{{userDetails.login}}</p>
+                <p> {{userDetails.bio}}</p>
+                <p><i class="pi pi-map-marker"></i> {{userDetails.location}}</p>
+                <p><i class="pi pi-twitter"></i> <a class="user-redirects" [href]="'https://twitter.com/'+userDetails.twitter_username"> @{{userDetails.twitter_username}}</a></p>
+                <p><i class="pi pi-link"></i> <a class="user-redirects" [href]="userDetails.html_url"> {{userDetails.html_url}}</a></p>
+            </div>
+
+            <div class="repository-list col-12 md:col-9">
+                <app-repository-list [userName]="userDetails.login"
+                    [totalRepositories]="userDetails.public_repos"></app-repository-list>
+            </div>
+        </div>
+
+       
+    </div>
+
+</div>

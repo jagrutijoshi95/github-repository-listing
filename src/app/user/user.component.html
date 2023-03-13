@@ -1,0 +1,12 @@
+<div class="main-container">
+    <p-card header="Github Repositories" [style]="{width: '360px'}" styleClass="data-card">
+        <div class="p-field">
+            <label for="username">Enter your GitHub username</label>
+            <input class="txtUsername" id="username" type="username" pInputText [(ngModel)]="userName" />
+        </div>
+
+        <ng-template pTemplate="footer">
+            <p-button class="btnSubmit" label="submit" (onClick)="getUserDetails()"></p-button>
+        </ng-template>
+    </p-card>
+</div>

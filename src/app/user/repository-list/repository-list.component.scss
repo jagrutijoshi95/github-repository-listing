@@ -1,0 +1,25 @@
+.repo-card {
+    display: grid;
+}
+
+:host ::ng-deep .p-card{
+    box-shadow: 0 2px 7px -1px rgb(0 0 0 / 55%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+:host ::ng-deep .p-card .p-card-title {
+    color: var(--primary-color);
+
+}
+
+:host ::ng-deep .p-card .p-card-content {
+    padding-top: 0;
+}
+
+:host ::ng-deep .p-chip.custom-chip {
+    background: var(--primary-color);
+    color: var(--primary-color-text);
+}
+
+.repo-grid{
+    width: 100%;
+}
