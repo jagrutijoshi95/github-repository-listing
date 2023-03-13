@@ -10,7 +10,7 @@ import { Repository } from '../model/reository.model';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://api.github.com/users/';
+  apiUrl = 'https://api.github.com/users/';
   constructor(private http: HttpClient) {}
 
   /**

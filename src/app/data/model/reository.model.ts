@@ -1,6 +1,6 @@
 export interface Repository{
     id?:string;
     description?:string;
-    topics?:string;
+    topics?:string[];
     name?:string;
 }

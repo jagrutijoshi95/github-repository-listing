@@ -8,7 +8,8 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 ## Running unit tests
 
-Run `npm run test` to execute the unit tests via Jest.
+Run `npm run test` to execute the unit tests via Karma.
+Run `ng test --no-watch --code-coverage` to check code coverage.
 
 
 ## Development Details
@@ -22,7 +23,6 @@ Run `npm run test` to execute the unit tests via Jest.
     # user.component.ts
     # user.service.ts
 
-
 ## Deployment in Github Pages
 
-Url:     
+Url: `https://jagrutijoshi95.github.io`  
