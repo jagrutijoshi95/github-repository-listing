@@ -24,10 +24,15 @@
       "dom"
     ]
   },
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/*.ts"
+  ],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "strictDomEventTypes": false,
   }
 }
